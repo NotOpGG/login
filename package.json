@@ -1,0 +1,42 @@
+{
+  "name": "not_op",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tristanneumann1/notOp.gg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tristanneumann1/notOp.gg/issues"
+  },
+  "homepage": "https://github.com/tristanneumann1/notOp.gg#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "express": "^4.16.3",
+    "helmet": "^3.13.0",
+    "mocha": "^5.2.0",
+    "morgan": "^1.9.0",
+    "npm": "^6.4.1",
+    "request": "^2.88.0",
+    "supertest": "^3.1.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.5.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.5.0"
+  }
+}
