@@ -40,25 +40,35 @@ describe('Server tests', () => {
       requestToServer({
         method: 'GET',
       }, (err, res, body) => {
-        expect(res.statusCode).to.equal(200);
-        expect(body.username).to.equal('twittles');
-        expect(body.region).to.equal('na');
+        expect(res.statusCode).to.not.equal(404);
+        expect(res.req.path).to.include('region=na');
+        expect(res.req.path).to.include('username=twittles2');
         done();
-      }, '/stats/api/?region=na&user=twittles2');
+      }, '/stats/region=na/username=twittles2');
     });
-
-    it('returns 10 data points', (done) => {
+    
+    it('should redirect incorrect user', (done) => {
       requestToServer({
         method: 'GET',
       }, (err, res, body) => {
-        expect(res.statusCode).to.equal(200);
-        expect(body.games.length).to.equal(10);
+        expect(res.statusCode).to.not.equal(404);
+        expect(res.req.path).to.equal('/');
         done();
-      }, '/stats/api/?region=na&user=twittles2');
+      }, '/stats/username=twittles2/region=na');
     });
   });
 });
-
+  
+  
+// it('returns 10 data points', (done) => {
+//   requestToServer({
+//     method: 'GET',
+//   }, (err, res, body) => {
+//     expect(res.statusCode).to.equal(200);
+//     expect(body.games.length).to.equal(10);
+//     done();
+//   }, '/stats/api/?region=na&user=twittles2');
+// });
 
 
 
