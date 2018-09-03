@@ -1,0 +1,14 @@
+body{
+  margin:0;
+  padding:0;
+  min-height: 100vh;
+}
+canvas{
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:-1;
+}
+#myCanvas{
+  background-color: #0ae;
+}
