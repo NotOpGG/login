@@ -1,0 +1,19 @@
+/* :local(.inputContainer){
+  /* display: block; */
+  /* position: absolute; */
+  margin-top: 50%;
+  margin-left: auto;
+  border: red 1px solid;
+}
+
+:local(.input) {
+  min-width: 400px;
+} */
+
+
+:global(#App) {
+  position: relative;
+  border: yellow solid 20px;
+  height: 100vh;
+  width: 100vh;
+}
