@@ -1,19 +1,26 @@
-/* :local(.inputContainer){
-  /* display: block; */
-  /* position: absolute; */
-  margin-top: 50%;
-  margin-left: auto;
-  border: red 1px solid;
+:global(#App) {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+
+:local(.inputContainer){
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  max-width: 100%;
+  top: 50%;
 }
 
 :local(.input) {
-  min-width: 400px;
-} */
+  display: inline-block;
+  width: auto;
+}
 
-
-:global(#App) {
-  position: relative;
-  border: yellow solid 20px;
-  height: 100vh;
-  width: 100vh;
+:local(.submit) {
+  float: right;
+  width: auto;
 }
